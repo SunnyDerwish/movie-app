@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+body {
+	background: #141414;
+	color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dropdown-menu {
+	background: #2c2c2c;
+	border-radius: 0.25rem;
+	margin-top: 0.5rem;
+	position: absolute;
+	width: 32%;
+	z-index: 1000;
+	max-height: 300px;
+	overflow-y: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dropdown-item {
+	color: #ffffff;
+	padding: 0.5rem 1rem 1rem 1rem;
+	text-decoration: none;
+	display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dropdown-item:hover, .dropdown-item:focus {
+	color: #141414;
+	background-color: #f8f9fa;
+	text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.form-control {
+	background: #2c2c2c;
+	color: #ffffff;
+	border: none;
+	border-radius: 0.25rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control:focus {
+	box-shadow: none;
+	border: 1px solid #575757;
+}
+
+
+.movie-app > .row {
+
+	
+	 overflow-x: auto;
+	flex-wrap: nowrap;
+  gap: 10px;
+  padding: 10px 0;
+  
+}
+
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
+  width: 150px;
+  height: 225px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+}
+
+.favourite-popup {
+	background: #2c2c2c;
+	color: #fff;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 250px;
+	padding: 20px;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+	transform: translateX(-100%);
+	transition: transform 0.3s ease-in-out;
+	overflow-y: auto;
+	z-index: 1000;
+}
+
+.favourites-popup.visible {
+	transform: translateX(0);
 }

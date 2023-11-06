@@ -1,0 +1,44 @@
+.search-results-container {
+    color: #ffffff;
+  }
+  
+  .movie-result-item {
+    background: #2c2c2c;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  
+  .movie-poster {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .movie-info {
+    flex-grow: 1;
+  }
+  
+  .movie-title {
+    margin: 0;
+  }
+  
+  .movie-release-date {
+    font-size: 0.9rem;
+  }
+  
+  .select-movie-button {
+    background: #f8f9fa;
+    color: #141414;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin-left: auto; /* Pushes the button to the right */
+    cursor: pointer;
+  }
+  
+  .select-movie-button:hover,
+  .select-movie-button:focus {
+    background: #e2e6ea;
+  }
+  
